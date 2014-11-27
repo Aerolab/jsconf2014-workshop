@@ -1,0 +1,99 @@
+/* The body is the main window for our app */
+body {
+  background: #333;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  overflow: hidden;
+}
+
+
+/* Adding the "show-nav" class to the body, we enable the custom title bar */
+body.show-nav nav {
+  display: block;
+}
+body.show-nav #serverInfo, 
+body.show-nav #videoPlayer {
+  top: 48px;
+}
+
+
+/* The Title Bar */
+nav {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  font-size: 14px;
+  line-height: 48px;
+  background: #222222;
+  text-align: center;
+  color: #fff;
+  z-index: 999;
+
+  /* Enable Dragging */
+  -webkit-app-region: drag;
+}
+nav .close {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  border-radius: 20px;
+  background: #5888CD;
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+
+  /* Disable Dragging just for this button */
+  -webkit-app-region: no-drag;
+}
+  nav .close:hover {
+    background: #729BD4;
+  }
+
+
+/* Server Info (Remote Control IP) */
+#serverInfo {
+  background: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+  #serverInfo h1 {
+    color: #fff;
+    margin: 0 40px;
+    font-size: 32px;
+    line-height: 140%;
+    font-weight: 400;
+    width: 100%;
+  }
+
+
+/* Video Player */
+#videoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+  iframe {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0;
+  }
+

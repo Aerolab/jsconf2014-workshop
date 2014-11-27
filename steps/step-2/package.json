@@ -6,8 +6,8 @@
   "main": "app://host/app/index.html",
 
   "window": {
-    "frame": true,
-    "toolbar": true
+    "frame": false,
+    "toolbar": false
   },
   
   "webkit": {

@@ -35,7 +35,6 @@ function onPlayerReady(event) {
   event.target.playVideo();
 }
 function onPlayerStateChange(event) {
-  return;
   if( event.data === YT.PlayerState.PLAYING ) {
     socket.emit('nowPlaying');
   }
@@ -80,6 +79,8 @@ function watchVideo(id) {
       videoId: id,
 
       playerVars: { 
+        origin: 'http://127.0.0.1',
+
         autoplay: 1, // Autoplay!
         enablejsapi: 1, // JS API
         modestbranding: 1, // Hide the Youtube Logo as much as possible
