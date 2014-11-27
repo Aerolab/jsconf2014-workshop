@@ -7,7 +7,7 @@
 
   "window": {
     "frame": true,
-    "toolbar": false
+    "toolbar": true
   },
   
   "webkit": {

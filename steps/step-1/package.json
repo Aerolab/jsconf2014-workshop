@@ -6,7 +6,7 @@
   "main": "app://host/app/index.html",
 
   "window": {
-    "frame": true,
+    "frame": false,
     "toolbar": false
   },
   
