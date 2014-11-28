@@ -18,6 +18,8 @@ npm install
 grunt build
 ```
 
+Alternatively, you can download [the source with all the binaries](https://s3.amazonaws.com/jsconf-workshop/node-webkit-workshop.zip) if you are having trouble with npm/grunt.
+
 We are mainly using Express, Socket.io, Grunt and Grunt Node-Webkit Builder.
 
 
