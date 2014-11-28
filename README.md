@@ -47,6 +47,8 @@ Node-Webkit is a bit temperamental under Linux, but you can give it a shot if yo
 
 # The Docs
 
+[The Slides](https://github.com/Aerolab/jsconf2014-workshop/blob/master/Node-Webkit-Workshop.pdf?raw=true)
+
 [Node-Webkit](https://github.com/rogerwang/node-webkit/wiki)
 
 [Express](http://expressjs.com/starter/hello-world.html)
