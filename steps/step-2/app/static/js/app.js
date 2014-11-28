@@ -7,8 +7,6 @@ var gui = require('nw.gui');
 var app = gui.App;
 var win = gui.Window.get();
 
-// Show Dev Tools on start
-win.showDevTools();
 
 // Fullscreen Menu Item
 var gui = require('nw.gui');
@@ -35,6 +33,12 @@ $(document).ready(function(){
     app.quit();
   });
 
+  // Dev Tools!
+  $('nav .tools').on('click', function(event){
+    event.preventDefault();
+    win.showDevTools();
+  });
+  
 });
 
 
