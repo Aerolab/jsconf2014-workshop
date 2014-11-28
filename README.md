@@ -19,3 +19,19 @@ grunt build
 ```
 
 We are mainly using Express, Socket.io, Grunt and Grunt Node-Webkit Builder.
+
+
+## Platforms
+
+The workshop has been tested on *Windows 7 / 8* and *MacOS Mavericks / Yosemite*.
+
+Node-Webkit is a bit temperamental under Linux, but you can give it a shot if you want.
+
+
+# The Docs
+
+[Node-Webkit](https://github.com/rogerwang/node-webkit/wiki)
+
+[Express](http://expressjs.com/starter/hello-world.html)
+
+[Socket.io](http://socket.io/docs/)
