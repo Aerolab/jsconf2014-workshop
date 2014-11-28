@@ -48,7 +48,22 @@ nav .close {
   nav .close:hover {
     background: #729BD4;
   }
-
+nav .tools {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 20px;
+  background: url(images/tools.png) no-repeat 50% 50%;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+  nav .tools:hover {
+    background-color: #444;
+  }
+  
 
 /* Server Info (Remote Control IP) */
 #serverInfo {
