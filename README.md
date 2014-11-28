@@ -52,3 +52,5 @@ Node-Webkit is a bit temperamental under Linux, but you can give it a shot if yo
 [Express](http://expressjs.com/starter/hello-world.html)
 
 [Socket.io](http://socket.io/docs/)
+
+[NoSQL] (https://github.com/petersirka/nosql)
