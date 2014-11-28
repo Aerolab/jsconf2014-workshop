@@ -15,12 +15,8 @@ $('#searchQuery').on('keyup', function(event){
   if( event.keyCode === 13 ) {
     // Show the loading gif and hide it when the search is done
     var q = $('#searchQuery').val();
-    if($("#results").is(":visible")) {
-      $('.loading').show();
-      searchYoutube(q, function(){ $('.loading').hide(); });
-    }else {
-      searchHistory(q);
-    }
+    $('.loading').show();
+    searchYoutube(q, function(){ $('.loading').hide(); });
   }
   else {
     // If not, wait a bit before searching automatically

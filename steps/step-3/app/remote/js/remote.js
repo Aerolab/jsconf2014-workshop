@@ -10,11 +10,6 @@ var socket = io.connect();
 var searchTimeout = null;
 $('#searchQuery').on('keyup', function(event){
 
-  // Revert to search results
-  $(".video-list").hide();
-  $("#results").show();
-  $(".tabs button").addClass('recent');
-
   // Cancel any queued searches
   clearTimeout(searchTimeout);
   // If the user pressed enter, search inmediately
