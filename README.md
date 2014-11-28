@@ -15,8 +15,23 @@ And then install the dependencies for the project:
 
 ```
 npm install
+```
+
+Before you continue, we recommend you open Gruntfile.js, and where it says
+
+```
+platforms: ['osx', 'win'], // You can add linux32 and linux64 as well
+```
+
+Leave *only the platform you are currently using* ('win' if you are on Windows, 'mac' if you are on Mac). This is so you'll download fewer assets.
+
+After that, run
+
+```
 grunt build
 ```
+
+Which will download all node-webkit binaries for the specified platforms (and build the app, which you don't actually need right now).
 
 Alternatively, you can download [the source with all the binaries](https://s3.amazonaws.com/jsconf-workshop/node-webkit-workshop.zip) if you are having trouble with npm/grunt.
 
