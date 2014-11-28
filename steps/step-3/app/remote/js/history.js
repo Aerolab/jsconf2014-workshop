@@ -1,55 +1,48 @@
-	
+  
 $(document).ready(function(){
-	
-	$(".tabs > .menu-btt").click(function(){
-		$(".nav-menu").toggle();
-	});
+  
+  // Toggle Recent Videos
+  $(".tabs button").click(function(){
+    if( $(this).hasClass('recent') ) {
 
-	$(".nav-menu").find("a[href='#search']").click(function(){
-		$("svg").css("visibility", "hidden");
-		$(this).find("svg").css("visibility", "visible");
-		
-		$(".video-list").hide();
-		$("#results").show();
-		
-		$(".nav-menu").hide();
-	});
+      $(".video-list").hide();
+      $("#history").show();
 
-	$(".nav-menu").find("a[href='#history']").click(function(){
-		$("svg").css("visibility", "hidden");
-		$(this).find("svg").css("visibility", "visible");
+      $(this).removeClass('recent');
 
-		$(".video-list").hide();
-		$("#history").show();
+      getRecents();
+    }
+    else {
+      $(".video-list").hide();
+      $("#results").show();
 
-		$(".nav-menu").hide();
-		
-		getRecents();
-	});
+      $(this).addClass('recent');
+    }
+  });
 
 });
 
 
 function getRecents() {
-	socket.emit("get history");
+  socket.emit("get history");
 }
 
 function searchHistory(q) {
-	socket.emit("search history", {q:q});
+  socket.emit("search history", {q:q});
 }
 
 socket.on("history", function(videos){
 
-	$('#history').html('');
+  $('#history').html('');
   var $template = $(".__templates .video");
 
-	if( typeof videos === 'undefined' || videos.length <= 0 ){ return; }
+  if( typeof videos === 'undefined' || videos.length <= 0 ){ return; }
 
-	videos.forEach(function(video){
+  videos.forEach(function(video){
     // You should really use something like handlebars here
     var $video = $template.clone();
 
-		$video.data('id', video.id);
+    $video.data('id', video.id);
     $video.data('title', video.title);
     $video.data('thumbnail', video.thumbnail);
 

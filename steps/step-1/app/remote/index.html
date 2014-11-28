@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset=“utf-8” />
+  <meta charset="utf-8" />
   <title>TV Remote</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
@@ -11,20 +11,29 @@
 </head>
 <body>
 
-  <div class="controls">
+  <nav class="controls">
+  
     <div class="search">
       <input id="searchQuery" type="search" value="" placeholder="Search on Youtube..." />
       <div class="loading"></div>
     </div>
+
     <div class="playback">
       <button class="play"></button>
       <button class="pause"></button>
     </div>
-  </div>
+
+    <div class="tabs">
+      <button class="recent"></button>
+    </div>
+    
+  </nav>
+
 
   <div id="results" class="video-list">
 
   </div>
+
 
   <div class="__templates" style="display:none;">
     <article class="video">

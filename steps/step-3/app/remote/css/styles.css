@@ -3,7 +3,7 @@ body {
 }
 
 /* The search form */
-.controls {
+nav.controls {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,9 +15,18 @@ body {
   z-index: 999;
   overflow: hidden;
 }
+
+nav.controls.with-tabs .search {
+  margin-left: 60px;
+}
+nav.controls.with-tabs .tabs {
+  display: block;
+}
+
 .controls .search {
   position: relative;
-  margin-right: 120px;
+  margin-left: 0;
+  margin-right: 60px;
 }
 .controls input[type=search] {
   box-sizing: border-box;
@@ -47,49 +56,52 @@ body {
 .controls .playback, .controls .tabs {
   position: absolute;
   top: 0;
-  right: 60px;
   width: 60px;
   height: 100%;
-  background: #000;
   overflow: hidden;
 }
-
+.controls .playback {
+  right: 0;
+}
 .controls .tabs {
-	right:0px;
+	left: 0;
+  display: none;
 }
 
-.controls .tabs {
-	background:#616161;
-}
 
 .playback button, .tabs button {
   width: 100%;
   height: 100%;
   border: none;
+  background-position: -1000px -1000px;
+  cursor:pointer;
+}
+
+.playback button {
   background-color: #CC181E;
   background-size: 60px 120px;
   background-image: url(images/playback@2x.png);
-  background-position: -1000px -1000px;
 }
- 
+
 .playback button.play {
 	background-position: 0px 0px;
 }
-
 .playback button.pause {
 	background-position: 0px -60px;
 }
 
+
 .tabs button {
-	background:none;
+  background-color: #333;
+  background-size: 60px 120px;
+  background-image: url(images/recent@2x.png);
 }
 
-.tabs .menu-btt {
-	background-image: url(images/hamburguer.png);
-	background-repeat:no-repeat;
-	background-position:50% 50%;
-	background-size:36px 36px;
-	cursor:pointer;
+.tabs button {
+  background-position: 0px -60px;
+}
+.tabs button.recent {
+	background-position: 0px 0px;
 }
 
 /* Video Listings */

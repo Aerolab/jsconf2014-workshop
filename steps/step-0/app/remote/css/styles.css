@@ -1,16 +1,9 @@
 body {
   background: #f0f0f0;
-  
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 /* The search form */
-.controls {
+nav.controls {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,8 +15,17 @@ body {
   z-index: 999;
   overflow: hidden;
 }
+
+nav.controls.with-tabs .search {
+  margin-left: 60px;
+}
+nav.controls.with-tabs .tabs {
+  display: block;
+}
+
 .controls .search {
   position: relative;
+  margin-left: 0;
   margin-right: 60px;
 }
 .controls input[type=search] {
@@ -51,32 +53,56 @@ body {
   display: none; /* Hidden by default */
 }
 
-
-.controls .playback {
+.controls .playback, .controls .tabs {
   position: absolute;
   top: 0;
-  right: 0;
   width: 60px;
   height: 100%;
-  background: #000;
   overflow: hidden;
 }
-.playback button {
+.controls .playback {
+  right: 0;
+}
+.controls .tabs {
+	left: 0;
+  display: none;
+}
+
+
+.playback button, .tabs button {
   width: 100%;
   height: 100%;
   border: none;
+  background-position: -1000px -1000px;
+  cursor:pointer;
+}
+
+.playback button {
   background-color: #CC181E;
   background-size: 60px 120px;
   background-image: url(images/playback@2x.png);
-  background-position: -1000px -1000px;
 }
-  .playback button.play {
-    background-position: 0px 0px;
-  }
-  .playback button.pause {
-    background-position: 0px -60px;
-  }
 
+.playback button.play {
+	background-position: 0px 0px;
+}
+.playback button.pause {
+	background-position: 0px -60px;
+}
+
+
+.tabs button {
+  background-color: #333;
+  background-size: 60px 120px;
+  background-image: url(images/recent@2x.png);
+}
+
+.tabs button {
+  background-position: 0px -60px;
+}
+.tabs button.recent {
+	background-position: 0px 0px;
+}
 
 /* Video Listings */
 .video-list {
@@ -126,3 +152,25 @@ body {
   margin: 0;
   line-height: 150%;
 }
+
+.nav-menu a{
+	display:block;
+	text-decoration:none;
+	font-size: 1.4em;
+	color: #000;
+	background: #616161;
+	border-bottom: 1px solid #333;
+	padding: 8px;
+}
+
+.nav-menu{
+	display:none;
+	margin-top:60px;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+

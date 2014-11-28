@@ -9,6 +9,12 @@ var socket = io.connect();
 // Search youtube when the user stops typing. This gives us an automatic autocomplete.
 var searchTimeout = null;
 $('#searchQuery').on('keyup', function(event){
+
+  // Revert to search results
+  $(".video-list").hide();
+  $("#results").show();
+  $(".tabs button").addClass('recent');
+
   // Cancel any queued searches
   clearTimeout(searchTimeout);
   // If the user pressed enter, search inmediately
